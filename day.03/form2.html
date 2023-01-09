@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <table summary="방문상담예약 신청 폼입니다." class="formTable">
+        <caption>
+          방문상담예약
+        </caption>
+        <colgroup>
+          <col style="width: 25%" />
+          <col />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row"><label for="user_name">교육형태</label></th>
+            <td>
+              <select
+                name="part_idx"
+                id="part_idx"
+                class="w50"
+                onchange="selectCategory(this.value);"
+              >
+                <option value>교육과정선택</option>
+                <option value="1">취업연수과정</option>
+                <option value="1">취업연수과정</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="user_name">수강과정</label>
+            </th>
+            <td>
+              <div class="courseWrap">
+                <select
+                  name="course_idx"
+                  id="course_idx"
+                  class="w50"
+                  onchange="insertSchedule(this.value);"
+                >
+                  <option value>수강과정선택</option>
+                </select>
+              </div>
+              <input
+                type="hidden"
+                name="course_name"
+                id="course_name"
+                class="input w50"
+                value
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="type">교육일정</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="edu_schedule"
+                id="edu_schedule"
+                class="input w50"
+                value
+                randonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="user_name">이름</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="name"
+                id="user_name"
+                title
+                class="input w50"
+                placeholder="이름을 입력해주세요."
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="phone">연락처</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                title
+                class="input w50 readonly"
+                placeholder="연락처를 입력해주세요."
+                maxlength="13"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="email">E-mail</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="input w50"
+                placeholder="이메일을 입력해 주세요."
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="address">거주지(주소)</label>
+            </th>
+            <td class="zipCode">
+              <input
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                class="input w30"
+                placeholder="우편번호"
+                readonly
+              />
+              <button class="btn btnZipCode">우편번호 찾기</button>
+              <input
+                type="text"
+                name="addr1"
+                id="roadAddress"
+                class="input w100"
+                placeholder="거주지(주소)를 입력해 주세요."
+              />
+              <input
+                type="text"
+                name="addr1"
+                id="roadAddress"
+                class="input w100"
+                placeholder="나머지(주소)를 입력해 주세요."
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="birth">생년월일</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="birth"
+                id="birth"
+                class="input w50 onlynum"
+                placeholder="생년월일을 입력해주세요"
+                maxlength="8"
+              />
+              <span class="ex">ex) 20000424</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">
+              <label for="address">성별</label>
+            </th>
+            <td>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="gender"
+                  id
+                  class="input"
+                  value="남자"
+                />
+                <span class="label"> 남자</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="gender"
+                  id
+                  class="input"
+                  value="여자"
+                />
+                <span class="label"> 여자</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for="adress">최종학력</label>
+            </th>
+            <td>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="grade"
+                  id
+                  class="input"
+                  value="고등학교"
+                />
+                <span class="label"> 고등학교</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="grade"
+                  id
+                  class="input"
+                  value="대학교(2/3년제)"
+                />
+                <span class="label"> 대학교(2/3년제)</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="grade"
+                  id
+                  class="input"
+                  value="대학교(4/5년제)"
+                />
+                <span class="label"> 대학교(4/5년제)</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="grade"
+                  id
+                  class="input"
+                  value="대학원(석사/박사)"
+                />
+                <span class="label">대학원(석사/박사)</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="grade"
+                  id
+                  class="input"
+                  value="기타"
+                />
+                <span class="label">기타</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for>학과(전공)</label>
+            </th>
+            <td>
+              <input
+                type="text"
+                name="department"
+                id="edu_schedule"
+                title
+                class="input w50"
+                placeholder="학과(전공)을 입력해 주세요"
+              />
+              <span class="ex"></span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for>직업(고용형태)</label>
+            </th>
+            <td>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="구직자"
+                />
+                <span class="label">구직자</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="재직자"
+                />
+                <span class="label">재직자</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="대학(원)생"
+                />
+                <span class="label">대학(원)생</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="개인사업자"
+                />
+                <span class="label">개인사업자</span>
+              </label>
+              <label class="radioBox">
+                <input type="radio" name="job" id class="input" value="기타" />
+                <span class="label">기타</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <label for>국민내일배움카드 발급</label>
+            </th>
+            <td>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="신청전"
+                />
+                <span class="label">신청전</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="신청완료(발급중)"
+                />
+                <span class="label">신청완료(발급중)</span>
+              </label>
+              <label class="radioBox">
+                <input
+                  type="radio"
+                  name="job"
+                  id
+                  class="input"
+                  value="발급완료"
+                />
+                <span class="label">발급완료</span>
+              </label>
+              <label class="radioBox">
+                <input type="radio" name="job" id class="input" value="기타" />
+                <span class="label">기타</span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

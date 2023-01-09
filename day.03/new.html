@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>
+          <label for>대관시간</label>
+        </th>
+        <td class="renTime">
+          <label>
+            <select name="start_time" class="w25 start">
+              <option value>시작시간을 선택해주세요</option>
+              <option value="9">오전09시</option>
+              <option value="10">오전 10시</option>
+              <option value="11">오전 11시</option>
+              <option value="12">오후 12시</option>
+              <option value="13">오후 01시</option>
+              <option value="14">오후 02시</option>
+              <option value="15">오후 03시</option>
+            </select>
+          </label>
+          <label>
+            <select name="end_time" class="w25 end"></select>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for>대관일정</label>
+        </th>
+        <td>
+          <input
+            type="text"
+            name="period"
+            id="period"
+            title
+            class="input w50"
+            placeholder="대관일정을 입력해 주세요."
+            readonly
+          />
+          <button class="btnCalendar on">
+            <span class="material-icons-outlined">calendar_month</span>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for>기타(문의사항)</label>
+        </th>
+        <td>
+          <textarea name="contant" id="content" cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

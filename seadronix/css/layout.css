@@ -1,0 +1,180 @@
+body{
+    font-family: "Lato",sans-serif;
+    font-size: 16px;
+    color:#111
+    /*background_color:"#111"*/
+}
+a { 
+    color: inherit;
+    text-decoration: ;
+}
+p {
+    line-height: 1.5;
+}
+img {
+    vertical-align: top;
+}
+.hidden {
+    display: none;
+}
+
+:root {
+    ---blue:rgb(4)
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    color:#fff;
+    z-index:99;
+    height: ;
+    overflow:
+}
+.header .logo a {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.header .logo a img {
+    height: 50px;
+    position: absolute;
+}
+.gnb  .list{
+    display: flex;
+}
+.gnb
+.gnb .list > li > a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 0 30px;
+}
+.gnb .list > li > a:hover{
+    color:#F00;
+    transition: color 1s;
+
+}
+.gnb .list > liLhover > a + .depth02{
+ display: block;
+
+}
+
+.gnb .list > li > .depth02 {
+    background-color:#fff;
+    color:#111;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight:700px;
+    position: absolute;
+    width:100%;
+    box-sizing: border-box;
+    pointer-events:none;
+    opacity: 0;
+    border-radius: 10px;
+    transition:opacity
+    /*display: none;*/
+}
+.gnb .list > li .depth02 li a {
+    display: block;
+    padding: 10px 0
+}
+.gnb .list > li .depth02 li a:hover {
+    display: block;
+    padding: 10px 0
+}
+.gnb .list > li .depth02 li a:hover {
+    display: block;
+    padding: 10px 0
+}
+
+
+.language{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 18;
+}
+.language a {
+    margin-left: 15px;
+}
+.language .active {
+    color:rgb(4, 63, 189);
+}
+
+.visual__video {
+    width: 100%;
+    height:100%
+    object-fit: cover;
+}
+.visual__txt {
+    position: absolute;
+    color:#fff;
+    top:100px;
+    left: 50px;
+    bottom:200px;
+    font-size:20px
+    /*top,left,bottom,right*/
+}
+.visual__txt h3{
+    font size: 48px;
+    font-weight:900;
+    margine-bottom:50px;
+}
+.visual__txt p {
+    margin-bottom: 30px;
+    }
+
+/*크기에 따른 css한번 더 쓰기...*/
+(media all and (max-width: 1300px)) {
+    .header{
+        flex-direction:column
+    }
+}
+
+.btn-top{
+    position:fixed;
+    width: 80px;
+    height:80px;
+    right: 50px;
+    bottom:50px;
+    background-color: var(--blue);
+    color:#fff;
+    border-radius:10px;
+    z-index:99;
+    border:none;
+    box-shadow:5px 5px 5px rgba(0,0,0,0.15)
+    transform: translateY(500px);
+    transition:all 0.25s ease;
+}
+.btn-tpo.on{
+    transform: translateY(0);
+}
+
+btnTop.addEventListener("click")
+
+.live {
+    background-color: #rgb(36,49,74) ;
+    width:1903px;
+    height; 269 203px;
+    color: #rgb(248,250,252);
+    padding: 2rem 0;
+    box-sizing:border-box;
+    display:block;
+    font-family:proxima, pretendard,sans-serif;
+    font-size:16px;
+    font weight: 400px;
+    line-height:24px;
+    text-align:start;
+    text size adjust: 100%;
+    webkit-tap-highlight-color: rgba(0,0,0,0)
+}
